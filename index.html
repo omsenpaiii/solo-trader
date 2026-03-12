@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Sangwan | Digital Services & Consulting</title>
-    <meta name="description" content="Independent digital services and consulting by Kartik Sangwan. Professional solutions tailored for your business needs.">
+    <title>Kartik Sangwan | Professional IKEA & Furniture Assembler</title>
+    <meta name="description" content="Professional IKEA and flat-pack furniture assembly services by Kartik Sangwan. Fast, reliable, and hassle-free setup.">
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +12,18 @@
     
     <style>
         :root {
-            /* Color Palette */
-            --primary: #4f46e5;       /* Indigo 600 */
-            --primary-light: #6366f1; /* Indigo 500 */
-            --primary-dark: #4338ca;  /* Indigo 700 */
-            --accent: #0ea5e9;        /* Sky 500 */
-            --bg-color: #fafaf9;      /* Stone 50 */
+            /* IKEA Color Palette */
+            --primary: #0058A3;       /* IKEA Blue */
+            --primary-light: #1A6EB4; 
+            --primary-dark: #004580;  
+            --accent: #FBD914;        /* IKEA Yellow */
+            --accent-hover: #E3C30D;
+            --bg-color: #fafaf9;      
             --surface: #ffffff;
-            --text-main: #1c1917;     /* Stone 900 */
-            --text-muted: #57534e;    /* Stone 500 */
-            --text-lighter: #a8a29e;  /* Stone 400 */
-            --border: #e7e5e4;        /* Stone 200 */
+            --text-main: #1c1917;     
+            --text-muted: #57534e;    
+            --text-lighter: #a8a29e;  
+            --border: #e7e5e4;        
             
             /* spacing / sizing */
             --max-width: 1150px;
@@ -91,6 +92,9 @@
             font-weight: 800;
             letter-spacing: -0.02em;
             color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         .logo span { color: var(--primary); }
         .nav-links {
@@ -106,14 +110,14 @@
         }
         .nav-links a:hover { color: var(--primary); }
         .btn-contact-nav {
-            background-color: var(--text-main);
+            background-color: var(--primary);
             color: white !important;
             padding: 0.6rem 1.25rem;
             border-radius: var(--radius-full);
             transition: all 0.3s ease;
         }
         .btn-contact-nav:hover {
-            background-color: var(--primary);
+            background-color: var(--primary-dark);
             transform: translateY(-1px);
         }
 
@@ -148,15 +152,25 @@
             font-size: 1.05rem;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
         }
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background-color: var(--primary);
             color: white;
-            box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+            box-shadow: 0 4px 14px 0 rgba(0, 88, 163, 0.39);
         }
         .btn-primary:hover {
+            background-color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+            box-shadow: 0 6px 20px rgba(0, 88, 163, 0.45);
+        }
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
         }
         .btn-outline {
             border: 2px solid var(--border);
@@ -166,7 +180,7 @@
         .btn-outline:hover {
             border-color: var(--primary);
             color: var(--primary);
-            background: rgba(79, 70, 229, 0.03);
+            background: rgba(0, 88, 163, 0.03);
         }
 
         /* Hero Section */
@@ -189,14 +203,14 @@
             opacity: 0.4;
         }
         .hero::before {
-            background-color: rgba(79, 70, 229, 0.3);
+            background-color: rgba(0, 88, 163, 0.3);
             width: 500px;
             height: 500px;
             top: -100px;
             right: -100px;
         }
         .hero::after {
-            background-color: rgba(14, 165, 233, 0.3);
+            background-color: rgba(251, 217, 20, 0.3);
             width: 400px;
             height: 400px;
             bottom: 100px;
@@ -210,15 +224,12 @@
             align-items: center;
         }
         .hero-content h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
             margin-bottom: 1.5rem;
             font-weight: 800;
         }
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .text-accent-color {
+            color: var(--primary);
         }
         .hero-content p {
             color: var(--text-muted);
@@ -242,7 +253,7 @@
         .hero-image-decor {
             position: absolute;
             inset: -1.5rem;
-            border: 2px dashed rgba(79, 70, 229, 0.3);
+            border: 3px solid rgba(251, 217, 20, 0.5); /* Yellow border */
             border-radius: var(--radius-lg);
             z-index: -1;
             transform: rotate(-3deg);
@@ -250,6 +261,7 @@
         }
         .hero-image-wrapper:hover .hero-image-decor {
             transform: rotate(0deg);
+            border-color: rgba(0, 88, 163, 0.5); /* Blue on hover */
         }
         .hero-image {
             border-radius: var(--radius-lg);
@@ -267,6 +279,16 @@
         }
         .hero-image-wrapper:hover .hero-image img {
             transform: scale(1.03);
+        }
+        
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            background: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
         }
 
         /* About Section */
@@ -310,8 +332,8 @@
         .service-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            top: 0; left: 0; right: 0; height: 5px;
+            background: var(--primary);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -325,7 +347,7 @@
         .service-icon {
             width: 3.5rem;
             height: 3.5rem;
-            background: rgba(79, 70, 229, 0.1);
+            background: rgba(251, 217, 20, 0.2);
             color: var(--primary);
             display: flex;
             align-items: center;
@@ -346,8 +368,8 @@
         .price-tag {
             display: inline-block;
             font-weight: 700;
-            color: var(--text-main);
-            background-color: var(--bg-color);
+            color: var(--primary-dark);
+            background-color: rgba(251, 217, 20, 0.3);
             padding: 0.5rem 1rem;
             border-radius: var(--radius-full);
             font-size: 0.9rem;
@@ -364,7 +386,7 @@
         }
         
         .contact-info-card {
-            background: linear-gradient(145deg, var(--text-main), #292524);
+            background: var(--primary);
             color: white;
             padding: 3rem;
             border-radius: var(--radius-lg);
@@ -378,10 +400,10 @@
             position: absolute;
             top: -20%; right: -20%;
             width: 60%; height: 60%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            background: radial-gradient(circle, rgba(251,217,20,0.15) 0%, transparent 60%);
         }
         .contact-info-card h3 { color: white; font-size: 2rem; margin-bottom: 1rem; }
-        .contact-info-card > p { color: #d6d3d1; margin-bottom: 2.5rem; font-size: 1.1rem; }
+        .contact-info-card > p { color: #dbeafe; margin-bottom: 2.5rem; font-size: 1.1rem; }
         
         .contact-methods {
             display: flex;
@@ -396,9 +418,9 @@
             font-size: 1.15rem;
             font-weight: 500;
         }
-        .contact-method svg { opacity: 0.8; }
+        .contact-method svg { opacity: 0.9; color: var(--accent); }
         .contact-method a { transition: color 0.2s; }
-        .contact-method a:hover { color: #a5b4fc; }
+        .contact-method a:hover { color: var(--accent); }
 
         .stripe-badge {
             display: inline-flex;
@@ -449,14 +471,19 @@
 
         /* Footer */
         footer {
-            background-color: var(--bg-color);
-            border-top: 1px solid var(--border);
+            background-color: #111827;
+            color: #f3f4f6;
             padding: 2.5rem 0;
             text-align: center;
         }
         footer p {
-            color: var(--text-lighter);
+            color: #9ca3af;
             font-size: 0.95rem;
+        }
+        footer .disclaimer {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 1rem;
         }
 
         /* Mobile Responsive */
@@ -472,13 +499,11 @@
         }
         
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simplified mobile nav for a simple single page app */
+            .nav-links { display: none; } 
             .section-padding { padding: 5rem 0; }
             .contact-info-card { padding: 2rem; }
+            .logo-badge { margin: 0 auto 1.5rem; }
         }
-
-        /* Smooth scroll utility fix */
-        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
@@ -486,11 +511,18 @@
     <!-- Header Navigation -->
     <header>
         <div class="container nav-inner">
-            <a href="#" class="logo">Kartik<span>Sangwan</span></a>
+            <a href="#" class="logo">
+                <svg viewBox="0 0 100 40" width="60" height="24" xmlns="http://www.w3.org/2000/svg" aria-label="IKEA style logo">
+                    <rect width="100" height="40" fill="#0058A3"/>
+                    <ellipse cx="50" cy="20" rx="45" ry="17" fill="#FBD914"/>
+                    <text x="50" y="28" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#0058A3" text-anchor="middle" letter-spacing="1">IKEA</text>
+                </svg>
+                <span>Assembler</span>
+            </a>
             <nav class="nav-links">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#contact" class="btn-contact-nav">Contact Me</a>
+                <a href="#contact" class="btn-contact-nav">Book Now</a>
             </nav>
         </div>
     </header>
@@ -500,19 +532,26 @@
         <section id="hero" class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <h1>Independent <span class="text-gradient">Digital Services</span> & Consulting</h1>
-                    <p>Professional solutions tailored for your business needs, delivered with precision and strategic insight.</p>
+                    <div class="logo-badge">
+                        <svg viewBox="0 0 100 40" width="90" height="36" xmlns="http://www.w3.org/2000/svg" aria-label="IKEA style logo">
+                            <rect width="100" height="40" fill="#0058A3"/>
+                            <ellipse cx="50" cy="20" rx="45" ry="17" fill="#FBD914"/>
+                            <text x="50" y="28" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#0058A3" text-anchor="middle" letter-spacing="1">IKEA</text>
+                        </svg>
+                        <span style="font-weight: 700; color: var(--text-muted); margin-left: 0.75rem;">Assembly Expert</span>
+                    </div>
+                
+                    <h1>Professional <span class="text-accent-color">Furniture Assembly</span> Services</h1>
+                    <p>Don't struggle with complex manuals, missing screws, and wobbly furniture. Fast, reliable, and stress-free assembly for your home or office.</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Work With Me</a>
-                        <a href="#services" class="btn btn-outline">View Services</a>
+                        <a href="#contact" class="btn btn-primary">Book Assembly</a>
+                        <a href="#services" class="btn btn-outline">My Services</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
                     <div class="hero-image-decor"></div>
                     <div class="hero-image">
-                        <!-- Ensure the user's uploaded image is referenced here. 
-                             Rename the image file to "hero.jpeg" before deploying on Vercel -->
-                        <img src="./hero.jpeg" alt="Kartik Sangwan - Profile Picture" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'; this.onerror=null;">
+                        <img src="./hero.jpeg" alt="Kartik Sangwan - Professional Assembly Picture" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1583847268964-b28ca8f51f92?auto=format&fit=crop&q=80&w=800'; this.onerror=null;">
                     </div>
                 </div>
             </div>
@@ -521,10 +560,10 @@
         <!-- About Section -->
         <section id="about" class="about section-padding">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title">About Your Builder</h2>
                 <div class="about-inner">
-                    <p>Hello, I'm <strong>Kartik Sangwan</strong>. I operate as a sole trader providing independent digital services and consulting. My focus is on helping clients navigate digital challenges, streamline their workflows, and implement effective technical solutions.</p>
-                    <p>With a commitment to clear communication and high-quality deliverables, I collaborate closely with businesses to ensure every project aligns perfectly with their strategic goals and vision.</p>
+                    <p>Hello, I'm <strong>Kartik Sangwan</strong>. I am a trusted, independent professional specializing in flat-pack and custom furniture assembly. While I focus heavily on IKEA products, I am highly experienced with all major commercial furniture brands.</p>
+                    <p>Building furniture shouldn't be the most frustrating part of moving or upgrading your space. I bring the right professional tools, deep mastery of confusing instruction manuals, and a commitment to making sure your furniture is built safely, perfectly square, firmly, and exactly as intended.</p>
                 </div>
             </div>
         </section>
@@ -532,37 +571,36 @@
         <!-- Services Section -->
         <section id="services" class="services section-padding">
             <div class="container">
-                <h2 class="section-title">Professional Services</h2>
+                <h2 class="section-title">Assembly Services</h2>
                 
                 <div class="services-grid">
                     <!-- Service 1 -->
                     <div class="service-card">
                         <div class="service-icon">
-                            <!-- SVG Icon from Lucide -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                         </div>
-                        <h3>Strategic Consulting</h3>
-                        <p>In-depth analysis of your existing systems and strategic guidance to optimize your digital operations and workflows.</p>
-                        <span class="price-tag">Starting from $150</span>
+                        <h3>Flat-Pack Assembly</h3>
+                        <p>Beds, dressers, TV units, MALM series, and dining sets. Perfect, wobble-free construction of all standard IKEA products.</p>
+                        <span class="price-tag">Starting at $50</span>
                     </div>
 
                     <!-- Service 2 -->
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="3" x2="12" y2="21"/><path d="M9 12h.01"/><path d="M15 12h.01"/></svg>
                         </div>
-                        <h3>Web & Digital Assets</h3>
-                        <p>Custom design, development, and deployment of professional digital platforms tailored to your business identity.</p>
+                        <h3>PAX Wardrobe Systems</h3>
+                        <p>Specialized installation for complex PAX systems, including sliding doors, interior KOMPLEMENT organizers, and LED lighting.</p>
                         <span class="price-tag">Custom Quote</span>
                     </div>
 
                     <!-- Service 3 -->
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="9" x2="15" y1="15" y2="15"/><line x1="9" x2="9" y1="9" y2="15"/><line x1="15" x2="15" y1="9" y2="15"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                         </div>
-                        <h3>Technical Solutions</h3>
-                        <p>Implementation of software tools, automations, and integrations designed to enhance team efficiency and reduce overhead.</p>
+                        <h3>Office & Workspace Setup</h3>
+                        <p>Desks (including BEKANT/IDÅSEN sit-stand setups), ergonomic MARKUS chairs, shelving units, from home offices to commercial spaces.</p>
                         <span class="price-tag">Hourly / Project Rates</span>
                     </div>
                 </div>
@@ -580,29 +618,29 @@
                         
                         <div class="policy-item">
                             <h4>Business Details</h4>
-                            <p>Owner: Kartik Sangwan (Sole Trader). I provide independent digital and consulting services directly to clients and businesses.</p>
+                            <p>Owner: Kartik Sangwan (Sole Trader). I provide independent furniture assembly and handyperson services.</p>
                         </div>
 
                         <div class="policy-item">
-                            <h4>Delivery & Fulfillment</h4>
-                            <p>All services are delivered digitally or via scheduled consultation sessions according to mutually agreed project timelines. Final deliverables will be securely transferred via email or private cloud links upon project completion.</p>
+                            <h4>Scheduling & Fulfillment</h4>
+                            <p>Services are performed on-site according to mutually agreed project timelines. For larger installations like PAX, please provide itemized lists ahead of time to accurately estimate timelines.</p>
                         </div>
 
                         <div class="policy-item">
                             <h4>Cancellation & Refund Policy</h4>
-                            <p>Consultation sessions may be rescheduled or cancelled up to 24 hours in advance. For digital deliverables and project-based work, refunds are handled fairly on a case-by-case basis corresponding to the amount of work completed. If you are unsatisfied with a service, please contact me directly within 14 days of delivery to request revisions or a refund.</p>
+                            <p>Assembly appointments may be rescheduled or cancelled up to 24 hours in advance without penalty. Payment is due upon completion and full satisfaction of the assembly. If you experience an issue with the assembly quality resulting from my workmanship, I will return to correct it free of charge within 14 days.</p>
                         </div>
 
                         <div class="policy-item">
-                            <h4>Privacy Policy</h4>
-                            <p>Your business information, correspondence, and project details are held in strict confidence. No data is shared with third parties without your explicit permission.</p>
+                            <h4>Coverage Area</h4>
+                            <p>Providing professional on-site assembly for your home or commercial office space. Please call or email to confirm service coverage in your specific area.</p>
                         </div>
                     </div>
 
                     <!-- Contact Details Card -->
                     <div class="contact-info-card">
-                        <h3>Ready to get started?</h3>
-                        <p>Reach out today to discuss your project requirements or request a custom proposal.</p>
+                        <h3>Ready to get your furniture built?</h3>
+                        <p>Reach out today to discuss your assembly requirements or request a quick quote.</p>
                         
                         <div class="contact-methods">
                             <div class="contact-method">
@@ -617,7 +655,7 @@
 
                         <!-- Stripe Trust Badge -->
                         <div class="stripe-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);">
                                 <rect width="18" height="12" x="3" y="10" rx="2" ry="2"/>
                                 <path d="M7 10V7a5 5 0 0 1 10 0v3"/>
                             </svg>
@@ -634,6 +672,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Kartik Sangwan. All rights reserved.</p>
+            <p class="disclaimer">Disclaimer: This is an independent assembly service. I am not affiliated with, endorsed by, or representing IKEA or Inter IKEA Systems B.V.</p>
         </div>
     </footer>
 
