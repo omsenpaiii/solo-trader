@@ -511,9 +511,16 @@
     <!-- Header Navigation -->
     <header>
         <div class="container nav-inner">
-            <a href="#" class="logo" style="font-size: 1.75rem; font-weight: 800; letter-spacing: 0.5px;">
-                <span style="color: var(--primary);">Kartik</span> 
-                <span style="color: var(--accent); -webkit-text-stroke: 1px var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">Sangwan</span>
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg viewBox="0 0 100 40" width="60" height="24" xmlns="http://www.w3.org/2000/svg" aria-label="IKEA style logo">
+                    <rect width="100" height="40" fill="#0058A3"/>
+                    <ellipse cx="50" cy="20" rx="45" ry="17" fill="#FBD914"/>
+                    <text x="50" y="28" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#0058A3" text-anchor="middle" letter-spacing="1">IKEA</text>
+                </svg>
+                <div style="display: flex; flex-direction: column; line-height: 1;">
+                    <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">Assembly by</span>
+                    <span style="font-size: 1.1rem; color: var(--primary); font-weight: 800;">Kartik Sangwan</span>
+                </div>
             </a>
             <nav class="nav-links">
                 <a href="#about">About</a>
